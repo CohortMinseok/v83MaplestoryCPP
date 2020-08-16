@@ -1,0 +1,34 @@
+
+to-do implement features:
+
+- maybe implement timeless equips level and exp system
+
+- maybe implement time-mobs (mobs/bosses that spawn in specific maps in specific times, for example hourly spawn of orange mushroom in it's map)
+
+- maybe implement debuffing/monster/boss skills/statusses
+NOTES:
+need to work out the details of these features first
+
+- maybe implement pet food
+
+- maybe implement pet fullness
+
+- maybe implement rings
+
+- maybe implement marriage
+
+- maybe implement minigames
+
+- maybe implement skillbooks
+
+- maybe implement npc interactions
+
+- maybe implement skill macros (saving on logout-login)
+
+- maybe implement cooldown saving on logout-login
+
+- maybe implement party quests (for example mcpq, ludipq, kerningpq)
+
+- maybe implement/fix character creation data loading for checks
+
+- ping/pong functionality? maybe needs to be implemented

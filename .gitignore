@@ -1,0 +1,5 @@
+*.vs/
+x64/
+enc_temp_folder/
+*.wz/
+AS_DEBUG

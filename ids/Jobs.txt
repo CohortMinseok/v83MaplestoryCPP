@@ -1,0 +1,84 @@
+Beginner = 0
+
+Warrior = 100
+Fighter = 110
+Crusader = 111
+Hero = 112
+Page = 120
+White Knight = 121
+Paladin = 122
+Spearman = 130
+Dragon Knight = 131
+Dark Knight = 132
+
+Magician = 200
+Wizard (Fire/Poison) = 210
+Mage (Fire/Poison) = 211
+Arch Mage (Fire/Poison) = 212
+Wizard (Ice/Lightning) = 220
+Mage (Ice/Lightning) = 221
+Arch Mage (Ice/Lightning) = 222
+Cleric = 230
+Priest = 231
+Bishop = 232
+
+Archer = 300
+Hunter = 310
+Ranger = 311
+Bowmaster = 312
+Crossbowman = 320
+Sniper = 321
+Marksman = 322
+
+Thief = 400
+Assassin = 410
+Hermit = 411
+Night Lord = 412
+Bandit = 420
+Chief Bandit = 421
+Shadower = 422
+
+Pirate = 500                                                                                                                                                           
+Brawler = 510
+Marauder = 511
+Buccaneer = 512
+Gunslinger = 520
+Outlaw = 521
+Corsair = 522
+
+Gm = 900
+SuperGM = 910
+
+Noblesse = 1000
+
+DawnWarrior1 = 1100
+DawnWarrior2 = 1110
+DawnWarrior3 = 1111
+DawnWarrior4 = 1112
+
+BlazeWizard1 = 1200
+BlazeWizard2 = 1210
+BlazeWizard3 = 1211
+BlazeWizard4 = 1212
+
+WindArcher1 = 1300
+WindArcher2 = 1310
+WindArcher3 = 1311
+WindArcher4 = 1312
+
+NightWalker1 = 1400
+NightWalker2 = 1410
+NightWalker3 = 1411
+NightWalker4 = 1412
+
+ThunderBreaker1 = 1500
+ThunderBreaker2 = 1510
+ThunderBreaker3 = 1511
+ThunderBreaker4 = 1512
+
+Legend = 2000
+
+Aran1 = 2100
+Aran2 = 2110
+Aran3 = 2111
+Aran4 = 2112

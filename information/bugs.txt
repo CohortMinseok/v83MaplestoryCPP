@@ -1,0 +1,175 @@
+
+buglist
+
+-------------------- critical/blocking bugs --------------------
+
+-
+
+-------------------- map and map life stuff (mobs, reactors, portals) --------------------
+
+- fix monster spawn rate (make use of mobRate info from maps) and check the correct timer seconds
+
+- fix reactors (need reactor objects system in maps, the map reactor data is already done)
+
+- drops (from mobs or from player) fly a bit weird when spawned
+
+- meso drops missing, non-optimal workaround in place at the moment
+
+- fix party exp (Mob::give_exp function at the bottom, check the formula)
+
+- fix other players dont see damage taken from character
+
+- fix other players can loot drops immidiatly when monster killed by other without being in a party
+
+- fix pet mesos/equip pickup: need to make a difference between drops by mobs (lootable by pet) and players (not lootable by pet) in the packet
+
+- to-do properly implement reactors (mainly: scripted reactors, reactors that drop items, boss spawn reactors)
+
+-------------------- skills --------------------
+
+- Door (bishop)
+
+- Poison Breath has no effect on mob (Mage F/P)
+
+- Slow (Mage F/P)
+
+- Poison Mist (Mage F/P)
+
+- Seal (Mage F/P)
+
+- Element composition has no effect on mob (Mage F/P)
+
+- Slow (mage I/L)
+
+- Cold Beam has no effect on mob (Mage I/L)
+
+- Seal (Mage I/L)
+
+- Element composition has no effect on mob (Mage I/L)
+
+- Oak Barrel (Brawler)
+
+- Energy Charge System (Marauder)
+
+- Energy Charge System (Buccaneer)
+
+- Time Leap (Buccaneer)
+
+- Pirate's Rage (Buccaneer)
+
+- Gaviota (Outlaw)
+
+- Octopus (Outlaw)
+
+- Homing Beacon has no effect on mob (Outlaw)
+
+- Bullseye (Corsair)
+
+- Wrath of the Octopi (Corsair)
+
+- Hypnotize has no effect on mob (Corsair)
+
+-------------------- scripted npcs --------------------
+
+- fix storage npcs (use the correct id's in player.cpp in the npc function)
+
+-------------------- scripted portals --------------------
+
+- elinia town portal to the library/grendel npc doesn't work
+
+-------------------- hired merchants --------------------
+
+- to-do fix hired merchant when store owner enters merchant for maintenance, it needs to be shown in the map on the merchant
+
+- to-do fix hired merchant when disconnecting while setting up a hired merchant, the items in it are lost
+
+- to-do fix hired merchant when owner of store takes out item it doesnt get back into inventory
+
+- to-do fix when closing hired merchant, items are stored, but it seems that amount of items stays at 1, so if multiple items were put it, some are lost
+
+-------------------- cashshop --------------------
+
+- when transfering cashitem from cash inventory to item inventory and otherwise, this may cause bugs like amount = 0 and if item already exists, amount doesn't increase
+
+- when buying cash item or package or storing or retrieving cash items, it needs to be checked first if the cash storage/item inventory has space for it
+
+- cashshop storage/inventory isn't saved to sql or loaded from it
+
+- when buying a cashitem fails, it should send the packet for that case
+
+- when an item is retrieved from the cash storage, it has a display bug: it is shown duplicate instead of one item that was already there (only a display bug, maybe an error in the packet)
+
+- storage slots need to be saved to and loaded from sql
+
+- to-do implement wishlist
+
+-------------------- guilds --------------------
+
+- guild bbs needs to be fully implemented (need to check and fix sql tables draft, add bbs class, use it, make handlers and packets finished, then code mysql data saving and data loading)
+
+- guild alliances need to be fully implemented
+
+- when a player joins/creates or leaves/disbands a guild, the guild name isn't shown/removed to other players in the map
+
+- when a guild emblem is added/changed/removed, the guild emblem name isn't shown/updated/removed to other players in the map
+
+- make sure guild master cannot delete his character (need check at character deletion)? or atleast prevent guild messing up due to that
+
+- when a character is deleted, maybe delete it from guilds cache too and send that update to all online guild members?
+
+-------------------- buddys --------------------
+
+- to-do fix target character doesn't get buddy invite after logging in if someone sent buddy request while he was offline
+
+- to-do fix sender character doesn't get notification if the target declined the buddy invite (not sure if this is a bug)
+
+- to-do fix buddy's don't get the info that player changed channel
+
+- to-do fix when buddy is deleted, the buddy still see's the deleter as online (not sure if this is a bug)
+
+-------------------- bugs --------------------
+
+- saving multiple mobs for the quest mob requirement progress tracking does not work, only one mob per quest is saved (in Player.cpp quest saving code)
+
+- quests give all possible rewards instead of one randomly from multiple when its a "secret" reward (not sure if this is a bug)
+
+- completed quests don't have a correct timestamp (not sure if this is a bug)
+
+- need to make a change in Item.cpp: unique id is only needed for cash stuff (cash items, cash equips and pets), change it to be that way
+
+- player summontimer needs to be fixed
+
+- to-do fix when trying to fame/defame someone within the blocked time, it says try again later instead of the correct message (not sure if this is a bug)
+
+- to-do fix when trade invite is declined, the inviter gets no notification about that (not sure if this is a bug)
+
+- to-do fix when party invite is declined, the inviter gets no notification about that (not sure if this is a bug)
+
+- to-do fix inventory item merging and sorting, make it properly work (at the moment it's only item sorting)
+
+- 2x exp coupon doesnt work with partys
+
+-------------------- other --------------------
+
+- to-do save hammers used to database
+
+- equip isn't updated after using vicious hammer (note: this is just about the data that is displayed)
+
+- improve angelscript related code (maybe save bytecode, maybe do other caching, and more)
+
+- to-do maybe use multiple worker threads for asynchronous operations (requires code to be correct for multithreading, for example by using locks and atoms and designing it that way)
+
+- to-do maybe set cash items to max one item per slot (not sure if that has to be that way)
+
+- to-do re-write logger (probably based on C++ stream functionality) and use it in exceptions
+
+- to-do maybe make acceptor asynchronous
+
+- to-do apply design rules like function naming convention
+
+- to-do make correct use of const and reference usage and passing
+
+- INFO: look up odinms based repacks how they load info from wz xmls which are simply extracts from .wz files, this will help to make proper use of .wz files
+
+- to-do check and improve .wz loading code also by consulting odinms based repacks on how they did it
+

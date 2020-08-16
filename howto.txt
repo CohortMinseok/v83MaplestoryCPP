@@ -1,0 +1,39 @@
+
+required programs, these need to be installed/put in place:
+
+* a supported operating system (see the readme file for that information)
+* mysql server, version 5.7.x, 64 bit
+* mysql workbench, version 6.3.x, 64 bit
+* visual studio 2017 (community edition or other)
+* the target maplestory version (atleast the .wz files are needed;
+the default game path in the source is: "C:\\Nexon\\MapleStory v0.83\\" (it's changeable in game_constants.hpp))
+
+how to set up the source:
+
+* execute the sql files using mysql workbench
+
+* setup and compile the poco library (or have the already compiled .lib files ready)
+1. download poco C++ libraries Complete Edition 1.9.0
+2. extract it to C:\\
+3. in the Foundation folder, open Foundation_x64_vs150.sln, remove the test projects, set windows sdk version to 10.x, set the mode to debug_static_md and compile, then set the mode to release_static_md and compile
+4. in the Data folder, open Data_x64_vs150.sln, remove TestSuite project, set windows sdk version to 10.x, set the mode to debug_static_md and compile, then set the mode to release_static_md and compile
+5. in the Data\\MySQL folder, open MySQL_x64_vs150.sln, remove TestSuite project, set windows sdk version to 10.x, set the mode to debug_static_md and compile, then set the mode to release_static_md and compile
+important Note: when getting compilation errors related to mysql.h file, abort compilation and replace #include <mysql.h> where the error is
+with #include "C:\Program Files\MySQL\MySQL Server 5.7\include\mysql.h" and compile again/re-compile it
+
+* the angelscript library needs to be setup by downloading it, extracting it and compiling it.
+
+get it from: http://www.angelcode.com/angelscript/downloads.html
+path should be: C:\angelscript_2.32.0\ (containg sdk and deeper folders)
+go to: C:\angelscript_2.32.0\sdk\angelscript\projects\msvc2015
+open angelscript.sln, choose yes/ok to upgrade it to a visual studio 2017 project
+set the option to x64 on the almost top bar in visual studio.
+set to multithreaded debug dll (debug) and mutlithreaded dll (release) in the C/C++ -> code generation -> runtime library option in the project options
+then compile for debug and release
+done, my source can now be compiled and used.
+
+* open xanadu.sln and compile the source (for testing and developing: in Debug mode, for other purposes: in Release mode)
+in visual studio do the following:
+for testing and developing: use the start debugging button or press F5 to start and debug the server
+for other purposes: use the start without debugging button or press Strg+F5 to start the server
+Note: Windows firewall or other firewalls either need to be deactivated or when prompted at the server start, allow the server to start to listen to connections and such

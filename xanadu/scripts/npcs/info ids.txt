@@ -1,0 +1,174 @@
+
+
+	// custom Free Market npcs
+	case 9100117: // Nautilus Gachapon
+	case 9100100: //Spa (Female)
+	case 9100101: //Ellinia
+	case 9100102: //Perion
+	case 9100103: //Kerning City
+	case 9100104: //Sleepywood
+	case 9100105: //Mushroom Shrine
+	case 9100106: //Spa (Male)
+	case 9100107: //Spa (Female)
+	case 9100109: //NLC
+	case 9100110: //Henesys
+	case 9100111: //Singapore
+	case 9100112: //EXP Gachapon
+	case 9100108:
+	case 9110011:
+	case 9110012:
+	case 9110013:
+	case 9110014:
+	case 9270043:
+		handle_gachapon_npc();
+		break;
+	case 9001001: // Maple Leaf Exchanger
+		handle_maple_leaf_exchanger_npc();
+		break;
+
+		// job advancer npcs
+	case 1032001: // Mage job advancer
+		handle_mage_job_advancer();
+		break;
+	case 1052001: // Thief job advancer
+		handle_thief_job_advancer();
+		break;
+	case 1012100: // Bowman job advancer
+		handle_bowman_job_advancer();
+		break;
+	case 1022000: // Warrior job advancer
+		handle_warrior_job_advancer();
+		break;
+	case 1072008: // Pirate job advancer
+		handle_pirate_job_advancer();
+		break;
+
+		// PQ Npcs
+
+	case 1012112: // Tory, warps into Henesys PQ
+		handle_hpq_tory_npc();
+		break;
+	case 1012113: // Tommy, warps out of Henesys PQ
+		handle_hpq_tommy_npc();
+		break;
+	case 1012114: // Growlie, warps to shortcut map after finishing HPQ main stage
+		handle_hpq_growlie_npc();
+		break;
+	case 9020000: // Lakelis, brings party into Kerning PQ
+		handle_kpq_lakelis_npc();
+		break;
+	case 9020001: // Cloto, KPQ Stage 1, 2, 3, 4, Last Stage
+		handle_kpq_cloto_npc();
+		break;
+	case 9020002: // Nella, Exit for KPQ
+		handle_kpq_nella_npc();
+		break;
+	case 2040034: // Red Sign, brings party into Ludibrium PQ
+		handle_lpq_red_sign_npc();
+		break;
+	case 9103000: // Pietri, at Ludibrium Maze PQ room 16
+		handle_npc_lmpq_pietri();
+		break;
+	case 9103001: // Rolly, brings party into Ludi Maze PQ
+		handle_npc_lmpq_rolly();
+		break;
+	case 9103002: // Rolly2, warps out of Ludi Maze PQ
+		handle_npc_lmpq_rolly2();
+		break;
+	case 9103003: // Rolly3, warps out of Ludi Maze PQ and gives rewards
+		handle_npc_lmpq_rolly3();
+		break;
+
+		// boss npcs
+	case 2041025: // Machine Apparatus, Origin of Clocktower(220080001)
+		handle_papulatus_npc();
+		break;
+	case 2030010: // Amon @ Last Mission: Zakum's Altar
+		handle_amon_zakum_npc();
+		break;
+	case 2030013: // Adobis @ El Nath: Entrance to Zakum Altar
+		handle_adobis_zakum_npc();
+		break;
+	case 2081005: // Horntail entrance
+		handle_horntail_entrance_npc();
+		break;
+
+	case 2012014: // Orbis Magic Spot
+		handle_orbis_magic_spot_npc();
+		break;
+	case 2012015: // EL Nath Magic Spot
+		handle_el_nath_magic_spot_npc();
+		break;
+	case 2040024: // First eos rock
+		handle_first_eos_rock_npc();
+		break;
+	case 2040025: // Second eos rock
+		handle_second_eos_rock_npc();
+		break;
+	case 2040026: // Third eos rock
+		handle_third_eos_rock_npc();
+		break;
+	case 2040027: // Fourth eos rock
+		handle_fourth_eos_rock_npc();
+		break;
+	case 2030000: // Jeff - El Nath : Ice Valley II (211040200)
+		handle_jeff_npc();
+		break;
+	case 2010007: // Heracle guild creator
+		handle_heracle_guild_creator_npc();
+		break;
+	case 2010008: // Lea guild emblem creator
+		handle_lea_guild_emblem_npc();
+		break;
+	case 9900000: // KIN
+		handle_kin_npc();
+		break;
+	case 9900001: // NimaKIN
+		handle_nimakin_npc();
+		break;
+
+		// maple camp npcs
+	case 2100: // Sera
+		handle_npc_sera();
+		break;
+
+		// ship, subway and plane npcs
+	case 1032008: // Ellinia Station Ticket Npc
+		set_map(200000100);
+		break;
+	case 2012001: // Orbis Station<To Ellinia>
+		set_map(101000300);
+		break;
+	case 2012013: // Orbis Station<Ludibrium>
+		set_map(220000100);
+		break;
+	case 2041000: // Ludubrium Station<Orbis>
+		set_map(200000100);
+		break;
+	case 2012006: // Orbis Platform Usher
+		handle_orbis_platform_usher();
+		break;
+	case 9270038: // Changi Airport Shalon
+		set_map(103000000);
+		break;
+	case 9270041: // Kerning City Irene
+		set_map(540010000);
+		break;
+	case 1052007: // The Ticket Gate (Kerning)
+		set_map(600010001);
+		break;
+	case 2102000: // Asesson (Ariant)
+		set_map(200000100);
+		break;
+	case 2082001: // Tommie (Leafre)
+		set_map(200000100);
+		break;
+
+		// misc npcs
+
+	case 9000020: // Spinel
+		handle_npc_spinel();
+		break;
+	case 9201022: // Thomas Swift
+		set_map(680000000);
+		break;
