@@ -1,12 +1,8 @@
+Maplestory Private Server Development using C++ for v83 of Global Maplestory
 
-project name: xanadu
-project type: game server for GMS v0.83 (Global MapleStory version 0.83)
+HUGE thank you to Buya (original developer)
 
-by Buya (the developer's pseudonym)
-
-the code is written in
-
-C++ (standard C++14 ISO/IEC 14882:2014)
+Written in C++ (standard C++14 ISO/IEC 14882:2014)
 
 integrated development environment (compiler, debugger, text editor)
 
@@ -45,3 +41,5 @@ arguments:
 -dedicated
 
 this argument switches the ip in one packet.
+
+Zain
